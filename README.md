@@ -9,6 +9,11 @@ With the recognization section, faces detected will also normalized.
 The dot product of it with the pool above, which was used to find the nearest face.
 
 
+### Pre-requirement
+1. Refer using GPU device to get best performance.
+2. Install `requirement.txt` package list.
+3. Make system can record all your angle face during register step like iPhone.
+
 ### To register
 
 `python3 register.py`

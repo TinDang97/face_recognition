@@ -1,3 +1,5 @@
 dpsutil==1.4.0
-torch
-torchvision
+torch==1.5.1
+torchvision==0.6.1
+opencv-python~=4.4.0.46
+numpy~=1.19.4
