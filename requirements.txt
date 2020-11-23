@@ -1,0 +1,3 @@
+dpsutil==1.4.0
+torch
+torchvision
