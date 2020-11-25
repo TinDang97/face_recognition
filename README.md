@@ -14,6 +14,7 @@ The dot product of it with the pool above, which was used to find the nearest fa
 2. Install `requirement.txt` package list.
 3. Make system can record all your angle face during register step like iPhone.
 
+Note: `camera_url` (integer) - mean select camera device id.
 ### To register
 
 `python3 register.py`
@@ -37,9 +38,12 @@ args.add_argument('--model_ids', default='model_face_ids.npy', type=str, help="M
 args.add_argument('--register_name', required=True, type=str, help="(Required) Register's name!")
 ```
 
-Note: `camera_url` (integer) - mean select camera device id.
+1. Write register's name in console.
+2. Let the program recording your face from any angle.
+3. Press `Q`: quit and save model | `Ctr-C`: interrupt process without model saving.
 
-`model_faces.npy` and `model_face_ids.npy` will be created, which store all vectors and vector's id.
+If press `Q`, `model_faces.npy` and `model_face_ids.npy` will be created, which store all vectors and vector's id.
+
 
 ### To recognize
     python3 recognize.py
@@ -63,9 +67,9 @@ args.add_argument('--model_registered', default='model_faces.npy', type=str, hel
 args.add_argument('--model_ids', default='model_face_ids.npy', type=str, help="Model contain face's ids")
 args = args.parse_args()
 ```
-
-Try it. :)
-Have fun.
+ - Press `Q` or `Ctr-C` to exit.
+ 
+Try it. :) Have fun.
 
 ### Test
 ![Tux, the Linux mascot](./images/test.png)
