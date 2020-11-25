@@ -70,9 +70,10 @@ class FaceDetector(object):
         self.landmark_scale = torch.tensor(
             [image_size[1], image_size[0], image_size[1], image_size[0],
              image_size[1], image_size[0], image_size[1], image_size[0],
-             image_size[1], image_size[0]]
+             image_size[1], image_size[0]],
+            dtype=torch.float32
         ).to(self.device)
-        self.box_scale = torch.tensor([image_size[1], image_size[0], image_size[1], image_size[0]]).to(self.device)
+        self.box_scale = torch.tensor([image_size[1], image_size[0], image_size[1], image_size[0]], dtype=torch.float32).to(self.device)
 
     def decode(self, loc, conf, landms, threshold, top=500):
         boxes = decode(loc.data.squeeze(0), self.prior_data, self.model_config['variance'])
